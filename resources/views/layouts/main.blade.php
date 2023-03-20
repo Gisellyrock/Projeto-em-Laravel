@@ -46,9 +46,16 @@
                 </div>
             </nav>
         </header>
-   @yield('content')
+    <main>
+    <div class="container-fluid">
+    <div class="row">
+        @if(session('msg'))
+        <p class="msg">{{ session('msg')}}</p>
+    @endif
+    @yield('content')
+    </div>
     <footer>
-        <p>HDC Events &copy; 2023</p>
+        <p>HDC Events: Space Cat &copy; 2023</p>
     </footer>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
